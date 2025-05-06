@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <!-- Definitions for gradients and effects -->
+  <defs>
+    <!-- Light Mode Gradients -->
+    <linearGradient id="light-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="light-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="light-secondary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="light-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    
+    <!-- Dark Mode Gradients -->
+    <linearGradient id="dark-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="dark-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="dark-secondary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="dark-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    
+    <!-- Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Subtle Animation -->
+    <animateTransform 
+      id="pulse"
+      attributeName="transform" 
+      attributeType="XML" 
+      type="scale" 
+      values="1;1.05;1" 
+      dur="3s" 
+      repeatCount="indefinite" />
+  </defs>
+  
+  <!-- Light Mode Version (Default) -->
+  <g id="light-mode">
+    <!-- Background with subtle pattern -->
+    <rect width="500" height="300" fill="url(#light-bg)" rx="15" ry="15" />
+    <path d="M0,150 Q125,100 250,150 T500,150" stroke="#f1f5f9" stroke-width="60" fill="none" opacity="0.3" />
+    <path d="M0,180 Q125,130 250,180 T500,180" stroke="#f1f5f9" stroke-width="40" fill="none" opacity="0.2" />
+    
+    <!-- Decorative Elements -->
+    <circle cx="60" cy="60" r="40" fill="url(#light-accent)" opacity="0.1" />
+    <circle cx="440" cy="240" r="50" fill="url(#light-accent)" opacity="0.1" />
+    
+    <!-- Global Connection Grid (Subtle) -->
+    <g opacity="0.07">
+      <path d="M0,50 h500 M0,100 h500 M0,150 h500 M0,200 h500 M0,250 h500" stroke="#64748b" stroke-width="1" />
+      <path d="M50,0 v300 M100,0 v300 M150,0 v300 M200,0 v300 M250,0 v300 M300,0 v300 M350,0 v300 M400,0 v300 M450,0 v300" stroke="#64748b" stroke-width="1" />
+    </g>
+    
+    <!-- Modern Nexus Symbol -->
+    <g transform="translate(110, 85)">
+      <!-- Main Hexagonal Network -->
+      <path d="M140,50 L190,0 L240,50 L190,100 Z" fill="url(#light-primary)" filter="url(#glow)" />
+      <path d="M70,50 L120,0 L170,50 L120,100 Z" fill="url(#light-secondary)" filter="url(#glow)" />
+      <path d="M0,50 L50,0 L100,50 L50,100 Z" fill="url(#light-accent)" filter="url(#glow)" />
+      
+      <!-- Connection Nodes -->
+      <circle cx="190" cy="50" r="10" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+      <circle cx="120" cy="50" r="10" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+      <circle cx="50" cy="50" r="10" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+      <circle cx="240" cy="50" r="10" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+      <circle cx="0" cy="50" r="10" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+      
+      <!-- Connection Lines -->
+      <line x1="10" y1="50" x2="40" y2="50" stroke="#3b82f6" stroke-width="3" />
+      <line x1="60" y1="50" x2="110" y2="50" stroke="#3b82f6" stroke-width="3" />
+      <line x1="130" y1="50" x2="180" y2="50" stroke="#3b82f6" stroke-width="3" />
+      <line x1="200" y1="50" x2="230" y2="50" stroke="#3b82f6" stroke-width="3" />
+    </g>
+    
+    <!-- Store Name with modern typography -->
+    <g transform="translate(250, 190)" text-anchor="middle">
+      <text font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="38" fill="#0f172a" letter-spacing="1">
+        Nexus<tspan fill="#2563eb">Store</tspan>
+      </text>
+      <text font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="16" fill="#64748b" y="28" letter-spacing="3">
+        GLOBAL COMMERCE
+      </text>
+    </g>
+    
+    <!-- Decorative Global Elements -->
+    <g transform="translate(250, 70) scale(0.35)" opacity="0.15">
+      <circle cx="0" cy="0" r="180" fill="none" stroke="#1e40af" stroke-width="8" />
+      <path d="M-180,0 Q-90,120 0,0 T180,0" fill="none" stroke="#1e40af" stroke-width="6" />
+      <path d="M-180,-60 Q-90,60 0,-60 T180,-60" fill="none" stroke="#1e40af" stroke-width="4" />
+      <path d="M-180,60 Q-90,-60 0,60 T180,60" fill="none" stroke="#1e40af" stroke-width="4" />
+      <path d="M-150,-150 L150,150 M-150,150 L150,-150" stroke="#1e40af" stroke-width="5" stroke-linecap="round" />
+    </g>
+  </g>
+  
+  <!-- Dark Mode Version -->
+  <g id="dark-mode" style="display:none">
+    <!-- Background with subtle pattern -->
+    <rect width="500" height="300" fill="url(#dark-bg)" rx="15" ry="15" />
+    <path d="M0,150 Q125,100 250,150 T500,150" stroke="#1e293b" stroke-width="60" fill="none" opacity="0.4" />
+    <path d="M0,180 Q125,130 250,180 T500,180" stroke="#1e293b" stroke-width="40" fill="none" opacity="0.3" />
+    
+    <!-- Decorative Elements -->
+    <circle cx="60" cy="60" r="40" fill="url(#dark-accent)" opacity="0.15" />
+    <circle cx="440" cy="240" r="50" fill="url(#dark-accent)" opacity="0.15" />
+    
+    <!-- Global Connection Grid (Subtle) -->
+    <g opacity="0.1">
+      <path d="M0,50 h500 M0,100 h500 M0,150 h500 M0,200 h500 M0,250 h500" stroke="#94a3b8" stroke-width="1" />
+      <path d="M50,0 v300 M100,0 v300 M150,0 v300 M200,0 v300 M250,0 v300 M300,0 v300 M350,0 v300 M400,0 v300 M450,0 v300" stroke="#94a3b8" stroke-width="1" />
+    </g>
+    
+    <!-- Modern Nexus Symbol -->
+    <g transform="translate(110, 85)">
+      <!-- Main Hexagonal Network -->
+      <path d="M140,50 L190,0 L240,50 L190,100 Z" fill="url(#dark-primary)" filter="url(#glow)" />
+      <path d="M70,50 L120,0 L170,50 L120,100 Z" fill="url(#dark-secondary)" filter="url(#glow)" />
+      <path d="M0,50 L50,0 L100,50 L50,100 Z" fill="url(#dark-accent)" filter="url(#glow)" />
+      
+      <!-- Connection Nodes -->
+      <circle cx="190" cy="50" r="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2" />
+      <circle cx="120" cy="50" r="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2" />
+      <circle cx="50" cy="50" r="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2" />
+      <circle cx="240" cy="50" r="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2" />
+      <circle cx="0" cy="50" r="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2" />
+      
+      <!-- Connection Lines -->
+      <line x1="10" y1="50" x2="40" y2="50" stroke="#60a5fa" stroke-width="3" />
+      <line x1="60" y1="50" x2="110" y2="50" stroke="#60a5fa" stroke-width="3" />
+      <line x1="130" y1="50" x2="180" y2="50" stroke="#60a5fa" stroke-width="3" />
+      <line x1="200" y1="50" x2="230" y2="50" stroke="#60a5fa" stroke-width="3" />
+    </g>
+    
+    <!-- Store Name with modern typography -->
+    <g transform="translate(250, 190)" text-anchor="middle">
+      <text font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="38" fill="#f1f5f9" letter-spacing="1">
+        Nexus<tspan fill="#60a5fa">Store</tspan>
+      </text>
+      <text font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="16" fill="#94a3b8" y="28" letter-spacing="3">
+        GLOBAL COMMERCE
+      </text>
+    </g>
+    
+    <!-- Decorative Global Elements -->
+    <g transform="translate(250, 70) scale(0.35)" opacity="0.2">
+      <circle cx="0" cy="0" r="180" fill="none" stroke="#60a5fa" stroke-width="8" />
+      <path d="M-180,0 Q-90,120 0,0 T180,0" fill="none" stroke="#60a5fa" stroke-width="6" />
+      <path d="M-180,-60 Q-90,60 0,-60 T180,-60" fill="none" stroke="#60a5fa" stroke-width="4" />
+      <path d="M-180,60 Q-90,-60 0,60 T180,60" fill="none" stroke="#60a5fa" stroke-width="4" />
+      <path d="M-150,-150 L150,150 M-150,150 L150,-150" stroke="#60a5fa" stroke-width="5" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Script to toggle between light and dark modes -->
+  <script type="text/javascript">
+    // This would work in a browser environment
+    // The logo can be exported with either mode visible
+    function toggleDarkMode(isDark) {
+      document.getElementById('light-mode').style.display = isDark ? 'none' : 'block';
+      document.getElementById('dark-mode').style.display = isDark ? 'block' : 'none';
+    }
+  </script>
+</svg>
